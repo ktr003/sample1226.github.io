@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, height=device-height, user-scalable=no">
+    <link rel="stylesheet" type="text/css" href="StyleSheet.css">
+    <script>
+        window.addEventListener('load', function () {
+            if ('serviceWorker' in navigator) {
+                navigator.serviceWorker.register('./sw.js').then(function (registration) {
+                });
+            }
+        });
+    </script>
+</head>
+
+<body>
+    <label>色<input id="color" type="color"></label>
+    <label>太さ<input id="width" type="number" min="1" max="30"></label>
+    <input type="image" id="pencil" src="1.png" width="25" class="active" onClick="tool(1)">
+    <input type="image" id="eraser" src="2.png" width="25" onClick="tool(2)">
+    <button id="delbt">クリア</button><button id="savebt">保存</button>
+    <br />
+    <canvas id="canvas"></canvas>
+    <script src="Script4.js"></script>
+</body>
+</html>
