@@ -21,9 +21,22 @@
     <label>太さ<input id="width" type="number" min="1" max="30"></label>
     <input type="image" id="pencil" src="1.png" width="25" class="active" onClick="tool(1)">
     <input type="image" id="eraser" src="2.png" width="25" onClick="tool(2)">
+    <input type="image" id="eraser" src="3.jpg" width="25" onClick="tool(3)">
     <button id="delbt">クリア</button><button id="savebt">保存</button>
     <br />
     <canvas id="canvas"></canvas>
-    <script src="Script4.js"></script>
+    <script src="Script1226.js"></script>
+
+    <button onclick="TogetherJS(this); return false;">TogetherJSを起動</button>
+    <script>
+        // 参加確認のポップアップを非表示にして自動接続
+        var TogetherJSConfig_suppressJoinConfirmation = true;
+        // 初動のポップアップを非表示
+        var TogetherJSConfig_suppressInvite = true;
+        // クリックエフェクト非表示
+        var TogetherJSConfig_dontShowClicks = true;
+    </script>
+    <script src="https://togetherjs.com/togetherjs-min.js"></script>
+
 </body>
 </html>
